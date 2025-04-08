@@ -1,0 +1,14 @@
+services:
+  web:
+    image: httpd
+    container_name: my-apache-app
+    ports:
+      - 80:80
+    volumes:
+      - /data/website/:/usr/local/apache2/htdocs
+
+    networks:
+      - my-network
+
+networks:
+  my-network:

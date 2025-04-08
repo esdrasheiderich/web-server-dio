@@ -1,0 +1,90 @@
+:root {
+  --primary-color: #0077cc;
+  --hover-color: #005fa3;
+  --bg-color: #f4f6f8;
+  --text-color: #333;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+#output {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  min-height: 1.5rem;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
